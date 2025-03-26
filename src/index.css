@@ -1,0 +1,8 @@
+@import "tailwindcss";
+:root {
+  --font-family: 'Red Hat Display', sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+}
