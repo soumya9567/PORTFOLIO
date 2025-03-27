@@ -3,6 +3,8 @@ import todo from "../assets/todo.png";
 import calculator from "../assets/calcu.png";
 import shopic from "../assets/shopic1.png";
 import olx from "../assets/olx1.png";
+import { Github } from "lucide-react"
+import { Link } from 'react-router-dom';
 
 function Project() {
     const projects = [
@@ -20,9 +22,16 @@ function Project() {
                         <img src={project.img} alt={project.title} className="w-3/4 h-32 object-cover rounded-lg mb-4 mx-auto" />
                         <h2 className="text-xl font-bold mb-2">{project.title}</h2>
                         <p className="text-gray-600 text-sm mb-4 text-justify px-2">{project.desc}</p>
-                        <button className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">
-                            Learn More
-                        </button>
+                        <div className="flex justify-center">
+                           <Link to={'https://github.com/soumya9567'} >
+                           <button className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition flex items-center gap-2">
+                                <Github className="text-black w-6 h-6" />
+                                Github
+                            </button>
+                           </Link>
+                        </div>
+
+
                     </div>
                 ))}
             </div>

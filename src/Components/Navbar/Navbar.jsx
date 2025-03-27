@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function Navbar() {
+function Navbar({ scrollToIntro, scrollToFind, scrollToProject }) {
     const [expand, setExpand] = useState(false);
     const [navColour, setNavColour] = useState(false);
 
@@ -8,7 +8,6 @@ function Navbar() {
         function scrollHandler() {
             setNavColour(window.scrollY >= 20);
         }
-
         window.addEventListener("scroll", scrollHandler);
         return () => window.removeEventListener("scroll", scrollHandler);
     }, []);
@@ -29,11 +28,11 @@ function Navbar() {
                     </button>
                 </div>
 
-               <div className={`absolute md:relative top-16 md:top-0 left-0 w-full md:w-auto bg-black md:bg-transparent flex flex-col md:flex-row items-center md:space-x-6 text-lg transition-all duration-300 ${expand ? "block" : "hidden"} md:flex`}>
-                    <div className="hover:text-pink-500  cursor-pointer p-3 md:p-0">HOME</div>
-                    <div className="hover:text-pink-500  cursor-pointer p-3 md:p-0">ABOUT</div>
-                    <div className="hover:text-pink-500  cursor-pointer p-3 md:p-0">CONTACT</div>
-                    <div className="hover:text-pink-500  cursor-pointer p-3 md:p-0">PROJECT</div>
+                <div className={`absolute md:relative top-16 md:top-0 left-0 w-full md:w-auto bg-black md:bg-transparent flex flex-col md:flex-row items-center md:space-x-6 text-lg transition-all duration-300 ${expand ? "block" : "hidden"} md:flex`}>
+                    <div onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="hover:text-pink-500 cursor-pointer p-3 md:p-0">HOME</div>
+                    <div onClick={scrollToIntro} className="hover:text-pink-500 cursor-pointer p-3 md:p-0">ABOUT</div>
+                    <div onClick={scrollToFind} className="hover:text-pink-500 cursor-pointer p-3 md:p-0">CONTACT</div>
+                    <div onClick={scrollToProject} className="hover:text-pink-500 cursor-pointer p-3 md:p-0">PROJECT</div>
 
                     <button className="mt-4 md:mt-0 bg-blue-500 w-28 h-9 rounded-lg hover:bg-pink-600 transition duration-300">
                         RESUME
