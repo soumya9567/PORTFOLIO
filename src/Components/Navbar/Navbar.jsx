@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import pdfFile from "../../assets/soumyas.pdf"
 
 function Navbar({ scrollToIntro, scrollToFind, scrollToProject }) {
     const [expand, setExpand] = useState(false);
@@ -15,7 +16,7 @@ function Navbar({ scrollToIntro, scrollToFind, scrollToProject }) {
     return (
         <div className={`sticky top-0 z-50 w-full ${navColour ? "bg-black bg-opacity-50 backdrop-blur-md" : "bg-transparent"}`}>
             <div className="flex justify-between items-center h-16 px-6 text-white shadow-md">
-                
+
                 <div>
                     <h1 className="font-bold text-2xl bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">
                         SOUMYA.
@@ -34,7 +35,17 @@ function Navbar({ scrollToIntro, scrollToFind, scrollToProject }) {
                     <div onClick={scrollToFind} className="hover:text-pink-500 cursor-pointer p-3 md:p-0">CONTACT</div>
                     <div onClick={scrollToProject} className="hover:text-pink-500 cursor-pointer p-3 md:p-0">PROJECT</div>
 
-                    <button className="mt-4 md:mt-0 bg-blue-500 w-28 h-9 rounded-lg hover:bg-pink-600 transition duration-300">
+                    <button
+                        className="mt-4 md:mt-0 bg-blue-500 w-28 h-9 rounded-lg hover:bg-pink-600 transition duration-300"
+                        onClick={() => {
+                            const link = document.createElement("a");
+                            link.href = pdfFile;
+                            link.download = "Soumyas.pdf";
+                            document.body.appendChild(link);
+                            link.click();
+                            document.body.removeChild(link);
+                        }}
+                    >
                         RESUME
                     </button>
                 </div>
