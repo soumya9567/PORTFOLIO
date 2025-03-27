@@ -4,7 +4,8 @@ import Type from './Components/Type';
 import profile from "./assets/profile.png";
 import "./style.css"; // Import external CSS file
 import Intro from './Components/Intro';
-import Find from './Components/Navbar/Find';
+import Find from './Components/Find';
+import Project from './Components/Project';
 
 function Home() {
     return (
@@ -34,6 +35,7 @@ function Home() {
             </div>
            <Intro />
            <Find />
+           <Project />
 
         </div>
     );
