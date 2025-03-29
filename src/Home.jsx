@@ -6,6 +6,7 @@ import "./style.css";
 import Intro from './Components/Intro';
 import Find from './Components/Find';
 import Project from './Components/Project';
+import Footer from './Components/Footer/Footer';
 
 function Home() {
     const introRef = useRef(null);
@@ -66,6 +67,8 @@ function Home() {
             <div ref={projectRef}>
                 <Project />
             </div>
+
+            <Footer />
         </div>
     );
 }
