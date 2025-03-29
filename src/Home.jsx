@@ -11,7 +11,7 @@ import Footer from './Components/Footer/Footer';
 function Home() {
     const introRef = useRef(null);
     const findRef = useRef(null);
-    const projectRef = useRef(null);  // ✅ Fixed missing projectRef
+    const projectRef = useRef(null);  
 
     const scrollToIntro = () => {
         introRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -53,17 +53,14 @@ function Home() {
                 </div>
             </div>
 
-            {/* Attach ref to Intro section */}
             <div ref={introRef}>
                 <Intro />
             </div>
 
-            {/* Attach ref to Find section */}
             <div ref={findRef}>
                 <Find />
             </div>
 
-            {/* Attach ref to Project section */}
             <div ref={projectRef}>
                 <Project />
             </div>

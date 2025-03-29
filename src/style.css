@@ -1,4 +1,4 @@
-/* Floating Animation */
+
 @keyframes float {
     0% { transform: translateY(0px); }
     50% { transform: translateY(-20px); }
@@ -8,7 +8,7 @@
     animation: float 3s ease-in-out infinite;
 }
 
-/* Slide from Left */
+
 @keyframes slideLeft {
     from { transform: translateX(-100px); opacity: 0; }
     to { transform: translateX(0); opacity: 1; }
@@ -17,7 +17,6 @@
     animation: slideLeft 1.5s ease-out;
 }
 
-/* Slide from Right */
 @keyframes slideRight {
     from { transform: translateX(100px); opacity: 0; }
     to { transform: translateX(0); opacity: 1; }
