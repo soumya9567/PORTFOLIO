@@ -16,9 +16,9 @@ function Project() {
 
     return (
         <div className="flex justify-center items-center min-h-screen p-5">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12">
                 {projects.map((project, index) => (
-                    <div key={index} className={`shadow-[0px_0px_10px_5px]  ${project.shadow} rounded-2xl p-5 max-w-xs text-center transition transform hover:scale-105 duration-300`}>
+                    <div key={index} className={`shadow-[0px_0px_10px_5px]  ${project.shadow} rounded-2xl p-5 gap-4 max-w-xs text-center transition transform hover:scale-105 duration-300`}>
                         <img src={project.img} alt={project.title} className="w-3/4 h-32 object-cover rounded-lg mb-4 mx-auto" />
                         <h2 className="text-xl font-bold mb-2">{project.title}</h2>
                         <p className="text-gray-600 text-sm mb-4 text-justify px-2">{project.desc}</p>
