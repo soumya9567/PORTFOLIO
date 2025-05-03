@@ -8,10 +8,10 @@ import { Link } from 'react-router-dom';
 
 function Project() {
     const projects = [
+        { img: olx, title: "OLX", desc: "An OLX-like platform enabling users to post and browse classified ads. Built using React, Tailwind CSS, and JavaScript, it ensures dynamic listings, authentication, and smooth user interactions.", shadow: "shadow-cyan-500" },
+        { img: shopic, title: "SHOPIC", desc: "Shopic is a modern e-commerce platform built with HTML, Tailwind CSS, and JavaScript, offering a seamless and responsive shopping experience with dynamic product listings, a wishlist, cart system, and secure checkout.", shadow: "shadow-pink-500" },
         { img: todo, title: "TO-DO LIST", desc: "A To-Do List using JavaScript is a simple task manager that lets users add, complete, and delete tasks. Built with HTML, CSS, and JavaScript, it's a great project for learning DOM manipulation and event handling.", shadow: "   shadow-pink-500" },
         { img: calculator, title: "CALCULATOR", desc: "A Calculator built using JavaScript allows users to perform basic arithmetic operations like addition, subtraction, multiplication, and division. Built with HTML, CSS, and JavaScript, this project enhances knowledge of event handling and DOM manipulation.", shadow: "shadow-cyan-500" },
-        { img: shopic, title: "SHOPIC", desc: "Shopic is a modern e-commerce platform built with HTML, Tailwind CSS, and JavaScript, offering a seamless and responsive shopping experience with dynamic product listings, a wishlist, cart system, and secure checkout.", shadow: "shadow-pink-500" },
-        { img: olx, title: "OLX", desc: "An OLX-like platform enabling users to post and browse classified ads. Built using React, Tailwind CSS, and JavaScript, it ensures dynamic listings, authentication, and smooth user interactions.", shadow: "shadow-cyan-500" }
     ];
 
     return (
