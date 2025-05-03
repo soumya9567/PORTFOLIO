@@ -29,7 +29,7 @@ function Navbar({ scrollToIntro, scrollToFind, scrollToProject }) {
                     </button>
                 </div>
 
-                <div className={`absolute md:relative top-16 md:top-0 left-0 w-full md:w-auto bg-black md:bg-transparent flex flex-col md:flex-row items-center md:space-x-6 text-lg transition-all duration-300 ${expand ? "block" : "hidden"} md:flex`}>
+                <div className={`absolute md:relative top-16 md:top-0 left-0 w-full md:w-auto bg-blue md:bg-transparent flex flex-col md:flex-row items-center md:space-x-6 text-lg transition-all duration-300 ${expand ? "block" : "hidden"} md:flex`}>
                     <div onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="hover:text-pink-500 cursor-pointer p-3 md:p-0">HOME</div>
                     <div onClick={scrollToIntro} className="hover:text-pink-500 cursor-pointer p-3 md:p-0">ABOUT</div>
                     <div onClick={scrollToFind} className="hover:text-pink-500 cursor-pointer p-3 md:p-0">CONTACT</div>
