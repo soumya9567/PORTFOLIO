@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import pdfFile from "../../assets/soumyas.pdf"
+import pdfFile from "../../assets/soumya-resume.pdf"
 
 function Navbar({ scrollToIntro, scrollToFind, scrollToProject }) {
     const [expand, setExpand] = useState(false);
@@ -40,7 +40,7 @@ function Navbar({ scrollToIntro, scrollToFind, scrollToProject }) {
                         onClick={() => {
                             const link = document.createElement("a");
                             link.href = pdfFile;
-                            link.download = "Soumyas.pdf";
+                            link.download = "Soumya-resume.pdf";
                             document.body.appendChild(link);
                             link.click();
                             document.body.removeChild(link);
